@@ -4,7 +4,7 @@
 
 break_conversion () {
 
-mkdir -p ./CompiledPdfOutput/.temp
+mkdir -p ../CompiledPdfOutput/.temp
 
 echo "Working on $first..."
 break_line

@@ -22,6 +22,7 @@ handle_error_directory_absent
 fi
 
 checker_first=$first
+temp_first=$first
 
 while [ $checker_first -le $last ]
 do
@@ -33,10 +34,7 @@ checker_first=$(($checker_first + 1))
 first=$(($first + 1))
 done
 
-checker_first=$(($checker_first - 1))
-first=$(($first - $checker_first))
-
-
+first=$temp_first
 
 while [ $first -le $last ]
 do
