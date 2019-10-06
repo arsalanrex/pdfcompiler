@@ -43,7 +43,7 @@ Working on 1...
 * Press Ctrl+Z to exit the script, or
 Press any key to continue...
 ```
-In case of files more than 50 it breaks the process in batches to avoid cache error.
+In case of files more than 50 files it breaks the process in batches to avoid cache error.
 ```
 ======================================================================
 +----------------------Arsalan's pdf converter-----------------------+
