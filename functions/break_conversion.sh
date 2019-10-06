@@ -40,23 +40,26 @@ set --
 for f in .* *; do
   [ "$#" -lt 50 ] || break
   [ -f "$f" ] || continue
-  [ -L "$f" ] && continue
+  [ -L "$f" ] && continue#!/bin/bash
+# Handles document conversion by braking and placing them in temp folder
+# Call using break_conversion
   set -- "$@" "$f"
 done
 mv -- "$@" ../CompiledPdfOutput/.temp/$first-$version/
 
 cd ..
 
-find CompiledPdfOutput/.temp/ -exec cp {} 1 \;
+find CompiledPdfOutput/.temp/*/* -exec cp {} $first \;
 
-# convert *$ext $output.pdf
-# echo " --Converted files in $first folder to pfd-- "
-
-# mv $output.pdf $loc/CompiledPdfOutput/
+break_conversion_convert
 
 cd ..
 
+rm -rf .temp
+
+cd ..
 echo " --Exited the directory-- "
+
 
 }
 

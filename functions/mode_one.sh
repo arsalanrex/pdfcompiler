@@ -4,6 +4,8 @@
 
 mode_one () {
 
+mode=1
+
 break_line
 
 echo -n "Please enter the name of the folder where the files are located: "

@@ -1,7 +1,7 @@
 # Don't track content of these folders
 1/
 2/
-
+CompiledPdfOutput/
 
 # Compiled source #
 ###################

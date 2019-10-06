@@ -25,11 +25,12 @@ execute_functions
 . "./functions/output.sh"
 . "./functions/file_checker.sh"
 . "./functions/break_conversion.sh"
+. "./functions/break_conversion_convert.sh"
 
 
 break_line
 
-echo "+---------------Arsalan's pdf converter----------------+"
+echo "+----------------------Arsalan's pdf converter-----------------------+"
 
 break_line
 
@@ -60,8 +61,12 @@ echo " --Transferred the pdf to $loc/CompiledPdfOutput/-- "
 
 break_line 
 
-echo " -----Tasks executed successfully!!!----- "
+echo " -------------------Tasks executed successfully!!!------------------- "
 
 break_line
 
 handle_error_exit
+
+# temp
+# mixed
+# check pdftk and image magick

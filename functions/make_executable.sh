@@ -14,6 +14,7 @@ chmod +x functions/conversion.sh
 chmod +x functions/output.sh
 chmod +x functions/file_checker.sh
 chmod +x functions/break_conversion.sh
+chmod +x functions/break_conversion_convert.sh
 
 
 }

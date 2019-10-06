@@ -2,8 +2,16 @@
 # Handles all the errors
 # Call using handle_error
 
+spin() {
+   local -a marks=( '/' '-' '\' '|' )
+   while [[ 1 ]]; do
+     printf '%s\r' "${marks[i++ % ${#marks[@]}]}"
+     sleep 1
+   done
+ }
+
 retry () {
-read -n 1 -s -r -p "Press any key to continue..."
+read -n 1 -s -r -p "Press any key to continue..." 
 ./run.sh
 }
 

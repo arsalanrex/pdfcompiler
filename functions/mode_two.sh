@@ -4,6 +4,8 @@
 
 mode_two () {
 
+mode=2
+
 break_line 
 
 echo "* Ensure that the folders are named in a"
@@ -24,23 +26,80 @@ checker_first=$first
 while [ $checker_first -le $last ]
 do
 
+break_line
 echo "Checking the extentions in the $checker_first directory:"
 file_checker
-first=$(($first + $next))
-
+checker_first=$(($checker_first + 1))
+first=$(($first + 1))
 done
+
+checker_first=$(($checker_first - 1))
+first=$(($first - $checker_first))
+
+
 
 while [ $first -le $last ]
 do
 
-conversion
+break_line
 
-first=$(($first + $next))
-echo " --Updated to the next directory-- "
+cd $first
+files_here=$(ls -1q * | wc -l)
+cd ..
+
+if [ $files_here -gt 50 ]
+then
+
+break_conversion
+else
+
+conversion
+fi
+
+first=$(($first + 1))
+
+done
 
 break_line
 
-done
+
+
+
+
+
+# if [ $ext_files -gt 50 ]
+
+# then
+
+# while [ $first -le $last ]
+# do
+
+# break_conversion
+
+# first=$(($first + $next))
+# echo " --Updated to the next directory-- "
+
+# break_line
+
+# done
+
+# else
+
+# while [ $first -le $last ]
+# do
+
+# conversion
+
+# first=$(($first + $next))
+# echo " --Updated to the next directory-- "
+
+# break_line
+
+# done
+
+# fi
+
+
 
 }
 

@@ -10,10 +10,26 @@ break_line
 cd $first
 echo " --Entered $first directory-- "
 
-convert *$ext $output.pdf
-echo " --Converted files in $first folder to pfd-- "
 
+
+if [ $mode == 1 ]
+then
+convert *$ext $output.pdf
+echo " --Converted files in $first folder to pfd by mode one-- "
 mv $output.pdf $loc/CompiledPdfOutput/
+
+else
+convert *$ext $output-$first.pdf
+echo " --Converted files in $first folder to pfd by mode two-- "
+mv $output-$first.pdf $loc/CompiledPdfOutput/
+
+fi
+
+
+
+
+
+
 
 cd ..
 echo " --Exited the directory-- "
